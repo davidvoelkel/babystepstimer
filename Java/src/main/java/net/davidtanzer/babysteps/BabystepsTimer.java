@@ -86,33 +86,26 @@ public class BabystepsTimer {
 			public void hyperlinkUpdate(final HyperlinkEvent e) {
 				if(e.getEventType() == HyperlinkEvent.EventType.ACTIVATED) {
 					if("command://start".equals(e.getDescription())) {
-						alwaysOnTop(true);
-						createTimerHtml(getRemainingTimeCaption(0L), BACKGROUND_COLOR_NEUTRAL, true);
-						repaint();
-						new TimerThread().start();
+						start();
 					} else if("command://stop".equals(e.getDescription())) {
-						timerRunning = false;
-						alwaysOnTop(false);
-						createTimerHtml(getRemainingTimeCaption(0L), BACKGROUND_COLOR_NEUTRAL, false);
-						repaint();
+						stop();
 					} else  if("command://reset".equals(e.getDescription())) {
-						currentCycleStartTime = now();
-						setBackgroundColor(BACKGROUND_COLOR_PASSED);
+						reset();
 					} else  if("command://quit".equals(e.getDescription())) {
-						log("exit");
-						System.exit(0);
+						quit();
 					}
 				}
 			}
 
-			private void alwaysOnTop(boolean alwaysOnTop) {
-				log("alwaysOnTop=" + alwaysOnTop);
-				timerFrame.setAlwaysOnTop(alwaysOnTop);
-			}
 		});
 		timerFrame.getContentPane().add(timerPane);
 
 		timerFrame.setVisible(true);
+	}
+	
+	private static void alwaysOnTop(boolean alwaysOnTop) {
+		log("alwaysOnTop=" + alwaysOnTop);
+		timerFrame.setAlwaysOnTop(alwaysOnTop);
 	}
 	
 	private static void repaint() {
@@ -174,6 +167,30 @@ public class BabystepsTimer {
 
 	private static long now() {
 		return clock.now();
+	}
+
+	static void start() {
+		alwaysOnTop(true);
+		createTimerHtml(getRemainingTimeCaption(0L), BACKGROUND_COLOR_NEUTRAL, true);
+		repaint();
+		new TimerThread().start();
+	}
+
+	static void stop() {
+		timerRunning = false;
+		alwaysOnTop(false);
+		createTimerHtml(getRemainingTimeCaption(0L), BACKGROUND_COLOR_NEUTRAL, false);
+		repaint();
+	}
+
+	static void reset() {
+		currentCycleStartTime = now();
+		setBackgroundColor(BACKGROUND_COLOR_PASSED);
+	}
+
+	static void quit() {
+		log("exit");
+		System.exit(0);
 	}
 
 	private static final class TimerThread extends Thread {
