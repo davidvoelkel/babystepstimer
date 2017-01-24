@@ -42,6 +42,12 @@ public class BabystepsTimer {
 		setBackgroundColor(BACKGROUND_COLOR_NEUTRAL);
 	}
 	
+	private static Clock clock = new RealClock();
+	
+	static void setClock(Clock clock) {
+		BabystepsTimer.clock = clock;
+	}
+
 	private static DecimalFormat twoDigitsFormat = new DecimalFormat("00");
 
 	public static void main(final String[] args) throws InterruptedException {
@@ -90,7 +96,7 @@ public class BabystepsTimer {
 						createTimerHtml(getRemainingTimeCaption(0L), BACKGROUND_COLOR_NEUTRAL, false);
 						repaint();
 					} else  if("command://reset".equals(e.getDescription())) {
-						currentCycleStartTime = System.currentTimeMillis();
+						currentCycleStartTime = now();
 						setBackgroundColor(BACKGROUND_COLOR_PASSED);
 					} else  if("command://quit".equals(e.getDescription())) {
 						log("exit");
@@ -166,18 +172,22 @@ public class BabystepsTimer {
 		return bodyBackgroundColor=color;
 	}
 
+	private static long now() {
+		return clock.now();
+	}
+
 	private static final class TimerThread extends Thread {
 		@Override
 		public void run() {
 			timerRunning = true;
-			currentCycleStartTime = System.currentTimeMillis();
+			currentCycleStartTime = now();
 			
 			while(timerRunning) {
-				long elapsedTime = System.currentTimeMillis() - currentCycleStartTime;
+				long elapsedTime = now() - currentCycleStartTime;
 				
 				if(elapsedTime >= SECONDS_IN_CYCLE*1000+980) {
-					currentCycleStartTime = System.currentTimeMillis();
-					elapsedTime = System.currentTimeMillis() - currentCycleStartTime;
+					currentCycleStartTime = now();
+					elapsedTime = now() - currentCycleStartTime;
 				}
 				if(elapsedTime >= 5000 && elapsedTime < 6000 && !BACKGROUND_COLOR_NEUTRAL.equals(bodyBackgroundColor)) {
 					setBackgroundColor(BACKGROUND_COLOR_NEUTRAL);
@@ -196,11 +206,7 @@ public class BabystepsTimer {
 					repaint();
 					lastRemainingTime = remainingTime;
 				}
-				try {
-					sleep(10);
-				} catch (InterruptedException e) {
-					//We don't really care about this one...
-				}
+				clock.sleep(10);
 			}
 		}
 	}
