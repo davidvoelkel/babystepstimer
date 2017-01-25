@@ -28,10 +28,13 @@ public class BabystepsTimerTest {
             .withReporter(Reporters.console())
             .withPathMapper(new ParentPathMapper<String[]>(Paths.get("src", "test", "resources", BabystepsTimerTest.class.getPackage().getName().replaceAll(".", "/"))))
             .build();
+	private static Clock clock;
 	
 	@BeforeClass
 	public static void setupTimerForTest() {
 		BabystepsTimer.setQuitHandler(() -> {});
+		clock = new RealClock();
+		BabystepsTimer.setClock(clock);
 	}
 	
 	@Test
@@ -45,11 +48,27 @@ public class BabystepsTimerTest {
 	public void startTimerAndSeeTimeDecreasing() throws Exception {
 		startApp();
 		BabystepsTimer.start();
-		Thread.sleep(1100);
-		Thread.sleep(1000);
+		sleep(2100);
 		BabystepsTimer.stop();
+		sleep(2100);
 		BabystepsTimer.quit();
 		verifyLogOutputFor("startTimerAndSeeTimeDecreasing");
+	}
+
+	private void sleep(int millis) throws InterruptedException {
+		clock.sleep(millis);
+	}
+	
+	@Test
+	public void startTimerSeeDecreasingAndReset() throws Exception {
+		startApp();
+		BabystepsTimer.start();
+		sleep(2100);
+		BabystepsTimer.reset();
+		sleep(6100);
+		BabystepsTimer.stop();
+		BabystepsTimer.quit();
+		verifyLogOutputFor("startTimerSeeDecreasingAndReset");
 	}
 
 	private void verifyLogOutputFor(String testMethodName) {
