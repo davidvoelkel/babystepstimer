@@ -1,0 +1,32 @@
+[0] = backgroundColor=#ffffff
+[1] = timerText=02:00, bodyColor=#ffffff, running=false
+[2] = alwaysOnTop=true
+[3] = timerText=02:00, bodyColor=#ffffff, running=true
+[4] = repaint
+[5] = timerText=02:00, bodyColor=#ffffff, running=true
+[6] = repaint
+[7] = timerText=01:59, bodyColor=#ffffff, running=true
+[8] = repaint
+[9] = timerText=01:58, bodyColor=#ffffff, running=true
+[10] = repaint
+[11] = backgroundColor=#ccffcc
+[12] = timerText=02:00, bodyColor=#ccffcc, running=true
+[13] = repaint
+[14] = timerText=01:59, bodyColor=#ccffcc, running=true
+[15] = repaint
+[16] = timerText=01:58, bodyColor=#ccffcc, running=true
+[17] = repaint
+[18] = timerText=01:57, bodyColor=#ccffcc, running=true
+[19] = repaint
+[20] = timerText=01:56, bodyColor=#ccffcc, running=true
+[21] = repaint
+[22] = backgroundColor=#ffffff
+[23] = timerText=01:55, bodyColor=#ffffff, running=true
+[24] = repaint
+[25] = timerText=01:54, bodyColor=#ffffff, running=true
+[26] = repaint
+[27] = alwaysOnTop=false
+[28] = timerText=02:00, bodyColor=#ffffff, running=false
+[29] = repaint
+[30] = exit
+
