@@ -16,6 +16,8 @@ package net.davidtanzer.babysteps;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -38,12 +40,22 @@ public class BabystepsTimer {
 	private static long currentCycleStartTime;
 	private static String lastRemainingTime;
 	private static String bodyBackgroundColor = BACKGROUND_COLOR_NEUTRAL;
+	private static List<String> logLines = new ArrayList<>();
+	public static List<String> getLogLines() {
+		return logLines;
+	}
+
 	static {
 		setBackgroundColor(BACKGROUND_COLOR_NEUTRAL);
 	}
 	
 	private static Clock clock = new RealClock();
+	private static QuitHandler quitHandler = () -> System.exit(0);
 	
+	static void setQuitHandler(QuitHandler quitHandler) {
+		BabystepsTimer.quitHandler = quitHandler;
+	}
+
 	static void setClock(Clock clock) {
 		BabystepsTimer.clock = clock;
 	}
@@ -138,8 +150,9 @@ public class BabystepsTimer {
 		timerPane.setText(timerHtml);
 	}
 
-	private static void log(String string) {
-		System.out.println(string);
+	private static void log(String message) {
+		System.out.println(message);
+		logLines.add(message);
 	}
 
 	public static synchronized void playSound(final String url) {
@@ -190,7 +203,7 @@ public class BabystepsTimer {
 
 	static void quit() {
 		log("exit");
-		System.exit(0);
+		quitHandler.onQuit();
 	}
 
 	private static final class TimerThread extends Thread {

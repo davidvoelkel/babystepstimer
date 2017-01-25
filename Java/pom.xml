@@ -20,6 +20,11 @@
 		  <version>1.0.5</version>
 		  <scope>test</scope>
 	</dependency>
+    <dependency>
+        <groupId>com.github.nikolavp</groupId>
+        <artifactId>approval-core</artifactId>
+        <version>0.3</version>
+    </dependency>
   	<dependency>
 		<groupId>junit</groupId>
 		<artifactId>junit</artifactId>
