@@ -1,2 +1,0 @@
-[backgroundColor=#ffffff, timerText=02:00, bodyColor=#ffffff, running=false, exit]
-

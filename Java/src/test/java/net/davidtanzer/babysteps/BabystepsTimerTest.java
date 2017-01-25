@@ -41,6 +41,17 @@ public class BabystepsTimerTest {
 		verifyLogOutputFor("startAndQuitApp");
 	}
 
+	@Test
+	public void startTimerAndSeeTimeDecreasing() throws Exception {
+		startApp();
+		BabystepsTimer.start();
+		Thread.sleep(1100);
+		Thread.sleep(1000);
+		BabystepsTimer.stop();
+		BabystepsTimer.quit();
+		verifyLogOutputFor("startTimerAndSeeTimeDecreasing");
+	}
+
 	private void verifyLogOutputFor(String testMethodName) {
 		List<String> lines = BabystepsTimer.getLogLines();
 		String fileName = testMethodName + ".txt";

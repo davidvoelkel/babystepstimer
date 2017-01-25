@@ -1,0 +1,16 @@
+[0] = backgroundColor=#ffffff
+[1] = timerText=02:00, bodyColor=#ffffff, running=false
+[2] = alwaysOnTop=true
+[3] = timerText=02:00, bodyColor=#ffffff, running=true
+[4] = repaint
+[5] = timerText=02:00, bodyColor=#ffffff, running=true
+[6] = repaint
+[7] = timerText=01:59, bodyColor=#ffffff, running=true
+[8] = repaint
+[9] = timerText=01:58, bodyColor=#ffffff, running=true
+[10] = repaint
+[11] = alwaysOnTop=false
+[12] = timerText=02:00, bodyColor=#ffffff, running=false
+[13] = repaint
+[14] = exit
+

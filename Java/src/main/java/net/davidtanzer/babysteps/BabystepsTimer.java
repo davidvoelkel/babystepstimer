@@ -40,15 +40,11 @@ public class BabystepsTimer {
 	private static long currentCycleStartTime;
 	private static String lastRemainingTime;
 	private static String bodyBackgroundColor = BACKGROUND_COLOR_NEUTRAL;
-	private static List<String> logLines = new ArrayList<>();
+	private static List<String> logLines;
 	public static List<String> getLogLines() {
 		return logLines;
 	}
 
-	static {
-		setBackgroundColor(BACKGROUND_COLOR_NEUTRAL);
-	}
-	
 	private static Clock clock = new RealClock();
 	private static QuitHandler quitHandler = () -> System.exit(0);
 	
@@ -62,7 +58,9 @@ public class BabystepsTimer {
 
 	private static DecimalFormat twoDigitsFormat = new DecimalFormat("00");
 
-	public static void main(final String[] args) throws InterruptedException {
+	public static void main(final String[] args) {
+		logLines = new ArrayList<>();
+		setBackgroundColor(BACKGROUND_COLOR_NEUTRAL);
 		timerFrame = new JFrame("Babysteps Timer");
 		timerFrame.setUndecorated(true);
 
