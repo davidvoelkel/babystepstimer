@@ -18,7 +18,6 @@ import java.nio.file.Paths;
 import org.junit.Test;
 
 import com.github.approval.Approval;
-import com.github.approval.Approvals;
 import com.github.approval.pathmappers.ParentPathMapper;
 import com.github.approval.reporters.Reporters;
 
@@ -35,8 +34,12 @@ public class BabystepsTimerTest {
 	public void startAndQuitApp() throws Exception {
 		startApp();
 		BabystepsTimer.quit();
-		Thread.sleep(1000);
-		APPROVER.verify(BabystepsTimer.getLogLines().toString(), Paths.get("startAndQuitApp.txt"));
+		verifyLogOutputFor("startAndQuitApp");
+	}
+
+	private void verifyLogOutputFor(String testMethodName) {
+		String fileName = testMethodName + ".txt";
+		APPROVER.verify(BabystepsTimer.getLogLines().toString(), Paths.get(fileName));
 	}
 
 	private void startApp() throws InterruptedException {
