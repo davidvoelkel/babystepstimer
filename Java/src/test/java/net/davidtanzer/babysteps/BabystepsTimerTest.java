@@ -14,7 +14,9 @@
 package net.davidtanzer.babysteps;
 
 import java.nio.file.Paths;
+import java.util.List;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.github.approval.Approval;
@@ -22,11 +24,13 @@ import com.github.approval.pathmappers.ParentPathMapper;
 import com.github.approval.reporters.Reporters;
 
 public class BabystepsTimerTest {
-	private static final Approval<String> APPROVER = Approval.of(String.class)
+	private static final Approval<String[]> APPROVER = Approval.of(String[].class)
             .withReporter(Reporters.console())
-            .withPathMapper(new ParentPathMapper<String>(Paths.get("src", "test", "resources", BabystepsTimerTest.class.getPackage().getName().replaceAll(".", "/"))))
+            .withPathMapper(new ParentPathMapper<String[]>(Paths.get("src", "test", "resources", BabystepsTimerTest.class.getPackage().getName().replaceAll(".", "/"))))
             .build();
-	static {
+	
+	@BeforeClass
+	public static void setupTimerForTest() {
 		BabystepsTimer.setQuitHandler(() -> {});
 	}
 	
@@ -38,8 +42,9 @@ public class BabystepsTimerTest {
 	}
 
 	private void verifyLogOutputFor(String testMethodName) {
+		List<String> lines = BabystepsTimer.getLogLines();
 		String fileName = testMethodName + ".txt";
-		APPROVER.verify(BabystepsTimer.getLogLines().toString(), Paths.get(fileName));
+		APPROVER.verify(lines.toArray(new String[lines.size()]), Paths.get(fileName));
 	}
 
 	private void startApp() throws InterruptedException {

@@ -1,2 +1,4 @@
-[backgroundColor=#ffffff, timerText=02:00, bodyColor=#ffffff, running=false, exit]
+[0] = backgroundColor=#ffffff
+[1] = timerText=02:00, bodyColor=#ffffff, running=false
+[2] = exit
 
