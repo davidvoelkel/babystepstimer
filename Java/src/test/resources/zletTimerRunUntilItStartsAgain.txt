@@ -1,0 +1,257 @@
+[0] = backgroundColor=#ffffff
+[1] = timerText=02:00, bodyColor=#ffffff, running=false
+[2] = alwaysOnTop=true
+[3] = timerText=02:00, bodyColor=#ffffff, running=true
+[4] = repaint
+[5] = timerText=02:00, bodyColor=#ffffff, running=true
+[6] = repaint
+[7] = timerText=01:59, bodyColor=#ffffff, running=true
+[8] = repaint
+[9] = timerText=01:58, bodyColor=#ffffff, running=true
+[10] = repaint
+[11] = timerText=01:57, bodyColor=#ffffff, running=true
+[12] = repaint
+[13] = timerText=01:56, bodyColor=#ffffff, running=true
+[14] = repaint
+[15] = timerText=01:55, bodyColor=#ffffff, running=true
+[16] = repaint
+[17] = timerText=01:54, bodyColor=#ffffff, running=true
+[18] = repaint
+[19] = timerText=01:53, bodyColor=#ffffff, running=true
+[20] = repaint
+[21] = timerText=01:52, bodyColor=#ffffff, running=true
+[22] = repaint
+[23] = timerText=01:51, bodyColor=#ffffff, running=true
+[24] = repaint
+[25] = timerText=01:50, bodyColor=#ffffff, running=true
+[26] = repaint
+[27] = timerText=01:49, bodyColor=#ffffff, running=true
+[28] = repaint
+[29] = timerText=01:48, bodyColor=#ffffff, running=true
+[30] = repaint
+[31] = timerText=01:47, bodyColor=#ffffff, running=true
+[32] = repaint
+[33] = timerText=01:46, bodyColor=#ffffff, running=true
+[34] = repaint
+[35] = timerText=01:45, bodyColor=#ffffff, running=true
+[36] = repaint
+[37] = timerText=01:44, bodyColor=#ffffff, running=true
+[38] = repaint
+[39] = timerText=01:43, bodyColor=#ffffff, running=true
+[40] = repaint
+[41] = timerText=01:42, bodyColor=#ffffff, running=true
+[42] = repaint
+[43] = timerText=01:41, bodyColor=#ffffff, running=true
+[44] = repaint
+[45] = timerText=01:40, bodyColor=#ffffff, running=true
+[46] = repaint
+[47] = timerText=01:39, bodyColor=#ffffff, running=true
+[48] = repaint
+[49] = timerText=01:38, bodyColor=#ffffff, running=true
+[50] = repaint
+[51] = timerText=01:37, bodyColor=#ffffff, running=true
+[52] = repaint
+[53] = timerText=01:36, bodyColor=#ffffff, running=true
+[54] = repaint
+[55] = timerText=01:35, bodyColor=#ffffff, running=true
+[56] = repaint
+[57] = timerText=01:34, bodyColor=#ffffff, running=true
+[58] = repaint
+[59] = timerText=01:33, bodyColor=#ffffff, running=true
+[60] = repaint
+[61] = timerText=01:32, bodyColor=#ffffff, running=true
+[62] = repaint
+[63] = timerText=01:31, bodyColor=#ffffff, running=true
+[64] = repaint
+[65] = timerText=01:30, bodyColor=#ffffff, running=true
+[66] = repaint
+[67] = timerText=01:29, bodyColor=#ffffff, running=true
+[68] = repaint
+[69] = timerText=01:28, bodyColor=#ffffff, running=true
+[70] = repaint
+[71] = timerText=01:27, bodyColor=#ffffff, running=true
+[72] = repaint
+[73] = timerText=01:26, bodyColor=#ffffff, running=true
+[74] = repaint
+[75] = timerText=01:25, bodyColor=#ffffff, running=true
+[76] = repaint
+[77] = timerText=01:24, bodyColor=#ffffff, running=true
+[78] = repaint
+[79] = timerText=01:23, bodyColor=#ffffff, running=true
+[80] = repaint
+[81] = timerText=01:22, bodyColor=#ffffff, running=true
+[82] = repaint
+[83] = timerText=01:21, bodyColor=#ffffff, running=true
+[84] = repaint
+[85] = timerText=01:20, bodyColor=#ffffff, running=true
+[86] = repaint
+[87] = timerText=01:19, bodyColor=#ffffff, running=true
+[88] = repaint
+[89] = timerText=01:18, bodyColor=#ffffff, running=true
+[90] = repaint
+[91] = timerText=01:17, bodyColor=#ffffff, running=true
+[92] = repaint
+[93] = timerText=01:16, bodyColor=#ffffff, running=true
+[94] = repaint
+[95] = timerText=01:15, bodyColor=#ffffff, running=true
+[96] = repaint
+[97] = timerText=01:14, bodyColor=#ffffff, running=true
+[98] = repaint
+[99] = timerText=01:13, bodyColor=#ffffff, running=true
+[100] = repaint
+[101] = timerText=01:12, bodyColor=#ffffff, running=true
+[102] = repaint
+[103] = timerText=01:11, bodyColor=#ffffff, running=true
+[104] = repaint
+[105] = timerText=01:10, bodyColor=#ffffff, running=true
+[106] = repaint
+[107] = timerText=01:09, bodyColor=#ffffff, running=true
+[108] = repaint
+[109] = timerText=01:08, bodyColor=#ffffff, running=true
+[110] = repaint
+[111] = timerText=01:07, bodyColor=#ffffff, running=true
+[112] = repaint
+[113] = timerText=01:06, bodyColor=#ffffff, running=true
+[114] = repaint
+[115] = timerText=01:05, bodyColor=#ffffff, running=true
+[116] = repaint
+[117] = timerText=01:04, bodyColor=#ffffff, running=true
+[118] = repaint
+[119] = timerText=01:03, bodyColor=#ffffff, running=true
+[120] = repaint
+[121] = timerText=01:02, bodyColor=#ffffff, running=true
+[122] = repaint
+[123] = timerText=01:01, bodyColor=#ffffff, running=true
+[124] = repaint
+[125] = timerText=01:00, bodyColor=#ffffff, running=true
+[126] = repaint
+[127] = timerText=00:59, bodyColor=#ffffff, running=true
+[128] = repaint
+[129] = timerText=00:58, bodyColor=#ffffff, running=true
+[130] = repaint
+[131] = timerText=00:57, bodyColor=#ffffff, running=true
+[132] = repaint
+[133] = timerText=00:56, bodyColor=#ffffff, running=true
+[134] = repaint
+[135] = timerText=00:55, bodyColor=#ffffff, running=true
+[136] = repaint
+[137] = timerText=00:54, bodyColor=#ffffff, running=true
+[138] = repaint
+[139] = timerText=00:53, bodyColor=#ffffff, running=true
+[140] = repaint
+[141] = timerText=00:52, bodyColor=#ffffff, running=true
+[142] = repaint
+[143] = timerText=00:51, bodyColor=#ffffff, running=true
+[144] = repaint
+[145] = timerText=00:50, bodyColor=#ffffff, running=true
+[146] = repaint
+[147] = timerText=00:49, bodyColor=#ffffff, running=true
+[148] = repaint
+[149] = timerText=00:48, bodyColor=#ffffff, running=true
+[150] = repaint
+[151] = timerText=00:47, bodyColor=#ffffff, running=true
+[152] = repaint
+[153] = timerText=00:46, bodyColor=#ffffff, running=true
+[154] = repaint
+[155] = timerText=00:45, bodyColor=#ffffff, running=true
+[156] = repaint
+[157] = timerText=00:44, bodyColor=#ffffff, running=true
+[158] = repaint
+[159] = timerText=00:43, bodyColor=#ffffff, running=true
+[160] = repaint
+[161] = timerText=00:42, bodyColor=#ffffff, running=true
+[162] = repaint
+[163] = timerText=00:41, bodyColor=#ffffff, running=true
+[164] = repaint
+[165] = timerText=00:40, bodyColor=#ffffff, running=true
+[166] = repaint
+[167] = timerText=00:39, bodyColor=#ffffff, running=true
+[168] = repaint
+[169] = timerText=00:38, bodyColor=#ffffff, running=true
+[170] = repaint
+[171] = timerText=00:37, bodyColor=#ffffff, running=true
+[172] = repaint
+[173] = timerText=00:36, bodyColor=#ffffff, running=true
+[174] = repaint
+[175] = timerText=00:35, bodyColor=#ffffff, running=true
+[176] = repaint
+[177] = timerText=00:34, bodyColor=#ffffff, running=true
+[178] = repaint
+[179] = timerText=00:33, bodyColor=#ffffff, running=true
+[180] = repaint
+[181] = timerText=00:32, bodyColor=#ffffff, running=true
+[182] = repaint
+[183] = timerText=00:31, bodyColor=#ffffff, running=true
+[184] = repaint
+[185] = timerText=00:30, bodyColor=#ffffff, running=true
+[186] = repaint
+[187] = timerText=00:29, bodyColor=#ffffff, running=true
+[188] = repaint
+[189] = timerText=00:28, bodyColor=#ffffff, running=true
+[190] = repaint
+[191] = timerText=00:27, bodyColor=#ffffff, running=true
+[192] = repaint
+[193] = timerText=00:26, bodyColor=#ffffff, running=true
+[194] = repaint
+[195] = timerText=00:25, bodyColor=#ffffff, running=true
+[196] = repaint
+[197] = timerText=00:24, bodyColor=#ffffff, running=true
+[198] = repaint
+[199] = timerText=00:23, bodyColor=#ffffff, running=true
+[200] = repaint
+[201] = timerText=00:22, bodyColor=#ffffff, running=true
+[202] = repaint
+[203] = timerText=00:21, bodyColor=#ffffff, running=true
+[204] = repaint
+[205] = timerText=00:20, bodyColor=#ffffff, running=true
+[206] = repaint
+[207] = timerText=00:19, bodyColor=#ffffff, running=true
+[208] = repaint
+[209] = timerText=00:18, bodyColor=#ffffff, running=true
+[210] = repaint
+[211] = timerText=00:17, bodyColor=#ffffff, running=true
+[212] = repaint
+[213] = timerText=00:16, bodyColor=#ffffff, running=true
+[214] = repaint
+[215] = timerText=00:15, bodyColor=#ffffff, running=true
+[216] = repaint
+[217] = timerText=00:14, bodyColor=#ffffff, running=true
+[218] = repaint
+[219] = timerText=00:13, bodyColor=#ffffff, running=true
+[220] = repaint
+[221] = timerText=00:12, bodyColor=#ffffff, running=true
+[222] = repaint
+[223] = timerText=00:11, bodyColor=#ffffff, running=true
+[224] = repaint
+[225] = playSound=2166__suburban-grilla__bowl-struck.wav
+[226] = timerText=00:10, bodyColor=#ffffff, running=true
+[227] = repaint
+[228] = timerText=00:09, bodyColor=#ffffff, running=true
+[229] = repaint
+[230] = timerText=00:08, bodyColor=#ffffff, running=true
+[231] = repaint
+[232] = timerText=00:07, bodyColor=#ffffff, running=true
+[233] = repaint
+[234] = timerText=00:06, bodyColor=#ffffff, running=true
+[235] = repaint
+[236] = timerText=00:05, bodyColor=#ffffff, running=true
+[237] = repaint
+[238] = timerText=00:04, bodyColor=#ffffff, running=true
+[239] = repaint
+[240] = timerText=00:03, bodyColor=#ffffff, running=true
+[241] = repaint
+[242] = timerText=00:02, bodyColor=#ffffff, running=true
+[243] = repaint
+[244] = timerText=00:01, bodyColor=#ffffff, running=true
+[245] = repaint
+[246] = playSound=32304__acclivity__shipsbell.wav
+[247] = backgroundColor=#ffcccc
+[248] = timerText=00:00, bodyColor=#ffcccc, running=true
+[249] = repaint
+[250] = timerText=02:00, bodyColor=#ffcccc, running=true
+[251] = repaint
+[252] = alwaysOnTop=false
+[253] = timerText=02:00, bodyColor=#ffffff, running=false
+[254] = repaint
+[255] = exit
+

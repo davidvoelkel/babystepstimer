@@ -96,6 +96,16 @@ public class BabystepsTimerTest {
 		verifyLogOutputFor("startTimerSeeDecreasingAndReset");
 	}
 
+	@Test
+	public void zletTimerRunUntilItStartsAgain() throws Exception {
+		startApp();
+		BabystepsTimer.start();
+		letItRunFor(121100);
+		BabystepsTimer.stop();
+		BabystepsTimer.quit();
+		verifyLogOutputFor("zletTimerRunUntilItStartsAgain");
+	}
+
 	private void verifyLogOutputFor(String testMethodName) {
 		List<String> lines = BabystepsTimer.getLogLines();
 		String fileName = testMethodName + ".txt";
