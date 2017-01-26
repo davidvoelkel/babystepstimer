@@ -15,6 +15,7 @@ package net.davidtanzer.babysteps;
 
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicLong;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -24,16 +25,45 @@ import com.github.approval.pathmappers.ParentPathMapper;
 import com.github.approval.reporters.Reporters;
 
 public class BabystepsTimerTest {
+	private static final QuitHandler KEIN_EXIT_IM_TEST = () -> {};
 	private static final Approval<String[]> APPROVER = Approval.of(String[].class)
             .withReporter(Reporters.console())
             .withPathMapper(new ParentPathMapper<String[]>(Paths.get("src", "test", "resources", BabystepsTimerTest.class.getPackage().getName().replaceAll(".", "/"))))
             .build();
-	private static Clock clock;
+	private static Clock clock = new Clock() {
+		
+		long time = 0l;
+		
+		@Override
+		public void sleep(int millis) {
+			while(time > targetTime) {
+				try {
+					Thread.sleep(1);
+				} catch (InterruptedException e) {
+				}
+			}
+			time += millis;
+			System.out.println("time=" + millis);
+		}
+		
+		@Override
+		public long now() {
+			return time;
+		}
+		
+	};
 	
+	private static long targetTime = Long.MAX_VALUE;
+	
+	private void letItRunFor(int millis) throws InterruptedException {
+		System.out.println("let it run for " + millis);
+		targetTime = clock.now() + millis;
+		while (clock.now() < targetTime) Thread.sleep(1);
+	}
+
 	@BeforeClass
 	public static void setupTimerForTest() {
-		BabystepsTimer.setQuitHandler(() -> {});
-		clock = new RealClock();
+		BabystepsTimer.setQuitHandler(KEIN_EXIT_IM_TEST);
 		BabystepsTimer.setClock(clock);
 	}
 	
@@ -48,24 +78,19 @@ public class BabystepsTimerTest {
 	public void startTimerAndSeeTimeDecreasing() throws Exception {
 		startApp();
 		BabystepsTimer.start();
-		sleep(2100);
+		letItRunFor(2100);
 		BabystepsTimer.stop();
-		sleep(2100);
 		BabystepsTimer.quit();
 		verifyLogOutputFor("startTimerAndSeeTimeDecreasing");
 	}
 
-	private void sleep(int millis) throws InterruptedException {
-		clock.sleep(millis);
-	}
-	
 	@Test
 	public void startTimerSeeDecreasingAndReset() throws Exception {
 		startApp();
 		BabystepsTimer.start();
-		sleep(2100);
+		letItRunFor(2100);
 		BabystepsTimer.reset();
-		sleep(6100);
+		letItRunFor(6100);
 		BabystepsTimer.stop();
 		BabystepsTimer.quit();
 		verifyLogOutputFor("startTimerSeeDecreasingAndReset");
